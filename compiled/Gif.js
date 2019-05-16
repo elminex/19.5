@@ -10,9 +10,8 @@ Gif = React.createClass({
   },
   render: function () {
     const url = this.props.loading ? GIPHY_LOADING_URL : this.props.url;
-    return React.createElement("div", {
-      style: styles
-    }, React.createElement("a", {
+    return React.createElement("a", {
+      style: styles,
       href: this.getUrl(),
       title: "View this on giphy",
       target: "new"
@@ -23,6 +22,6 @@ Gif = React.createClass({
         width: '100%',
         maxWidth: '350px'
       }
-    })));
+    }));
   }
 });

@@ -57,7 +57,7 @@ App = React.createClass({
       href: "http://giphy.com"
     }, "giphy"), ". Naciskaj enter, aby pobra\u0107 kolejne gify."), React.createElement(Search, {
       onSearch: this.handleSearch
-    }), React.createElement(Gif, {
+    }), this.state.gif.url && React.createElement(Gif, {
       loading: this.state.loading,
       url: this.state.gif.url,
       sourceUrl: this.state.gif.sourceUrl

@@ -1,4 +1,4 @@
-Search = React.createClass({
+Search = React.createClass ({
     getInitialState() {
         return {
             searchingText: ''
@@ -13,11 +13,13 @@ Search = React.createClass({
             this.props.onSearch(searchingText);
         }
     },
+
     handleKeyUp: function (e) {
         if (e.keyCode === 13) {
             this.props.onSearch(this.state.searchingText);
         }
     },
+
     render: function () {
         const styles = {
             fontSize: '1.5em',

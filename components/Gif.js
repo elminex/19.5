@@ -11,8 +11,7 @@ Gif = React.createClass({
   render: function () {
     const url = this.props.loading ? GIPHY_LOADING_URL : this.props.url;
     return (
-      <div style={styles}>
-        <a href={this.getUrl()} title='View this on giphy' target='new'>
+        <a style={styles} href={this.getUrl()} title='View this on giphy' target='new'>
           <img
             id='gif'
             src={url}
@@ -22,7 +21,6 @@ Gif = React.createClass({
             maxWidth: '350px'
           }} />
         </a>
-      </div>
     );
   },
 });
